@@ -11,7 +11,7 @@ public class Mochila{
     }
     
     //Getters
-    public String GetUtilidadMochila(){
+    public String getUtilidadMochila(){
         return utilidadMochila;
     }
     
@@ -33,5 +33,15 @@ public class Mochila{
     
     public void cambiarEsUsada(){
         seUsaHoy = !seUsaHoy;
+    }
+    
+    public void imprimirEstadoMochila(){
+        System.out.println("La mochila se usa para " + utilidadMochila);
+        System.out.println("Contiene " + objetosDentro + " dentro");
+        System.out.println("Se va a usar hoy?: " + seUsaHoy);
+    }
+    
+    public String obtenerEstadoMochila(){
+        return "uso: " + utilidadMochila + ", objetos dentro: " + objetosDentro + ", se usa hoy?: " + (seUsaHoy ? "sí" : "no");
     }
 }
